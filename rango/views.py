@@ -24,15 +24,15 @@ def index(request):
 
 
 def about(request):
-    context_dict = {'boldmessage': "Hey!"}
-    print(request.method)
-    print(request.user)
+   #context_dict = {'boldmessage': "Hey!"}
+    #print(request.method)
+    #print(request.user)
 
-    visitor_cookie_handler(request)
-    context_dict['visits'] = request.session['visits']
-    response = render(request, 'rango/about.html',context_dict)
-    return response
-   # return HttpResponse('Rango says here is the about page.' + '<br/> <a href="/rango/index/">Index Page</a>')
+    #visitor_cookie_handler(request)
+    #context_dict['visits'] = request.session['visits']
+    #response = render(request, 'rango/about.html',context_dict)
+    #return response
+    return HttpResponse('Rango says here is the about page.' + '<br/> <a href="/rango/index/">Index Page</a>')
 
 
 def show_category(request, category_name_slug):
